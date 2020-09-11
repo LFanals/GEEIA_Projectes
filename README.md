@@ -1,30 +1,31 @@
 # GEEIA_Projectes
-Des del meu punt de vista, Projectes Ès una assignatura que requereix una dedicaciÛ important. Els professors no faciliten l'aprenentage dels alumnes. La dificultat no rau en la matËria sinÛ en interpretar quË Ès el que els professors demanen, els quals no tenen uns criteris clars. 
+Des del meu punt de vista, Projectes √©s una assignatura que requereix una dedicaci√≥ important. Els professors no faciliten l'aprenentage dels alumnes. La dificultat no rau en la mat√®ria sin√≥ en interpretar qu√® √©s el que els professors demanen, els quals no tenen uns criteris clars. 
 
-Aquest repositori contÈ els arxius de totes les entregues efectuades per l'assignatura durant el curs 2019-2020, aixÌ com la majoria dels fitxers originals necessaris per efectuar-les. L'objectiu Ès mostrar als futurs alumnes de l'assignatura entregues v‡lides, per a quË les puguin prendre com a referËncia. No nomÈs els documents finals els poden ajudar, sinÛ que fitxers com la plantilla dels documents en LaTeX o la plantilla A3 en AutoCAD els poden resultat d'utilitat.
+Aquest repositori cont√© els arxius de totes les entregues efectuades per l'assignatura durant el curs 2019-2020, aix√≠ com la majoria dels fitxers originals necessaris per efectuar-les. L'objectiu √©s mostrar als futurs alumnes de l'assignatura entregues v√†lides, per a qu√® les puguin prendre com a refer√®ncia. No nom√©s els documents finals els poden ajudar, sin√≥ que fitxers com la plantilla dels documents en LaTeX o la plantilla A3 en AutoCAD els poden resultar d'utilitat.
 
-Les entregues i fitxers no sÛn perfectes, perÚ juntament amb l'examen van ser suficients per assolir MatrÌcula d'Honor amb una mitjana de 90.4/100, que va resultar ser la millor nota d'entre els 38 estudiants que van matricular l'assignatura.
+Les entregues i fitxers no s√≥n perfectes, per√≤ juntament amb l'examen van ser suficients per assolir Matr√≠cula d'Honor amb una mitjana de 90.4/100, que va resultar ser la millor nota d'entre els 38 estudiants que van matricular l'assignatura.
 
 
 ## Recomanacions
 
 ### Programes
-Per fer aquesta assignatura es necessiten diversos programes que va bÈ tenir instal∑lats el mÈs aviat possible.
-* Entorn de desenvolupament per crear i compilar documents LaTeX (els documents d'aquest respositori sÛn fets aixÌ), o Microsoft Office Word en el seu defecte.   
-* AutoCAD. Tot i existir la versiÛ per estudiants, recomano tenir una versiÛ completa per no tenir problemes a l'hora d'imprimir.
-* EPLAN. …s una bona eina per fer pl‡nols elËctrics, tot i que desprÈs s'han d'exportar a AutoCAD i hi pot haver problemes de compatibilitat en alguns elements. Fer els pl‡nols elËctrics amb AutoCAD tambÈ pot ser una bona opciÛ.
+Per fer aquesta assignatura es necessiten diversos programes que va b√© tenir instal¬∑lats el m√©s aviat possible.
+* Entorn de desenvolupament per crear i compilar documents LaTeX (els documents d'aquest respositori s√≥n fets aix√≠), o Microsoft Office Word en el seu defecte.   
+* AutoCAD. Tot i existir la versi√≥ per estudiants, recomano tenir una versi√≥ completa per no tenir problemes a l'hora d'imprimir.
+* EPLAN. √âs una bona eina per fer pl√†nols el√®ctrics, tot i que despr√©s s'han d'exportar a AutoCAD i hi pot haver problemes de compatibilitat en alguns elements. Fer els pl√†nols el√®ctrics amb AutoCAD tamb√© pot ser una bona opci√≥.
 
 ### Generals
 Em vaig emportar algunes impressions de l'assignatura que poden arribar a esdevenir consells per a futurs estudiants:
-* Suposa un gran avantatge fer les entregues una setmana desprÈs d'un altre grup. Tenir algun contacte en aquest primer grup que doni feedback o que fins i tot gravi l'‡udio del professor pot reduir la incertesa de quË Ès el que el professor vol veure.
-* AparenÁa > Qualitat. A les tasques d'oficina tËcnica es valora mÈs l'aparenÁa a primer cop d'ull que no pas la qualitat de la feina feta. Fer una bona distribuciÛ d'una nau industrial Ès insignificant al costat de fer servir el tipus de cotes o colors que agraden al professor. Alinear bÈ l'Ìndex d'un document sol tenir import‡ncia que fer correctament uns c‡lculs qualssevol. Fer mÈs volum de feina que els companys impressiona positivament.
-* Checklist > Quantitat > Qualitat. Pel projecte tËcnic, no n'hi ha prou amb l'explicat al punt anterior. A part de tenir una bona aparenÁa en els documents Ès molt important fer mÈs p‡gines que la majoria, ja que molts reben la impressiÛ que, per aquest fet, s'ha fet mÈs feina i la dificultat Ès major. Encara mÈs important que aixÚ Ès no tenir cap error de checklist, els quals nomÈs despuntuen. 3 errors de checklist suposen un suspens. Un treball amb moltes p‡gines i sense errors de checklist Ès gairebÈ sinÛnim de bona nota.
-* A l'entrega final del projecte tËcnic sÛn els companys els que marquen la nota de partida. Impressionar-los suposa tenir moltes garanties de ser ben qualificat pels professors.
-* Amb tot aixÚ dit, sembla lÚgic afirmar que el millor tema que un pot escollir pel projecte tËcnic no Ès un que domini, sinÛ un que li doni pl‡nols, taules, c‡lculs i, en general, moltes p‡gines amb la mÌnima dedicaciÛ possible. Intentar ajuntar disciplines diferents com programaciÛ i plaques solars com vaig fer en el meu projecte dona l'aparenÁa de projecte multidisciplinar i de dedicaciÛ.  
-* Fer projectes tËcnics diferents a la majoria es valora positivament. El meu any van sorgir molts treballs de plaques solars i tots van ser catalogats de molt similars. Fer un treball d'electrÚnica dÛna mÈs facilitats de diferenciar-se.
+* Encara que diguin que √©s igual, est√† m√©s ben vist imprimir els pl√†nols en A3 que no pas en dos A4 units.
+* Suposa un gran avantatge fer les entregues una setmana despr√©s d'un altre grup. Tenir algun contacte en aquest primer grup que doni feedback o que fins i tot gravi l'√†udio del professor pot reduir la incertesa de qu√® √©s el que el professor vol veure.
+* Aparen√ßa > Qualitat. A les tasques d'oficina t√®cnica es valora m√©s l'aparen√ßa a primer cop d'ull que no pas la qualitat de la feina feta. Fer una bona distribuci√≥ d'una nau industrial √©s insignificant al costat de fer servir el tipus de plegar correctament els pl√†nols. Alinear b√© l'√≠ndex d'un document sol tenir m√©s import√†ncia que fer correctament uns c√†lculs qualssevol. Fer m√©s volum de feina que els companys impressiona positivament.
+* Checklist > Quantitat > Qualitat. Pel projecte t√®cnic, no n'hi ha prou amb l'explicat al punt anterior. A part de tenir una bona aparen√ßa en els documents √©s molt important fer m√©s p√†gines que la majoria, ja que molts reben la impressi√≥ que, per aquest fet, s'ha fet m√©s feina i la dificultat √©s major. Encara m√©s important que aix√≤ √©s no tenir cap error de checklist, els quals nom√©s despuntuen. 3 errors de checklist suposen un suspens. Un treball amb moltes p√†gines i sense errors de checklist √©s gaireb√© sin√≥nim de bona nota.
+* A l'entrega final del projecte t√®cnic s√≥n els companys els que marquen la nota de partida. Impressionar-los suposa tenir moltes garanties de ser ben qualificat pels professors.
+* Amb tot aix√≤ dit, sembla l√≤gic afirmar que el millor tema que un pot escollir pel projecte t√®cnic no √©s un que domini, sin√≥ un que li doni pl√†nols, taules, c√†lculs i, en general, moltes p√†gines amb la m√≠nima dedicaci√≥ possible. Intentar ajuntar disciplines diferents com programaci√≥ i plaques solars com vaig fer en el meu projecte d√≥na l'aparen√ßa de projecte multidisciplinar i de dedicaci√≥.  
+* Fer projectes t√®cnics diferents a la majoria de companys es valora positivament. El meu any van sorgir molts treballs de plaques solars i tots van ser catalogats de molt similars, fins al punt de que encara que estiguessin ben fets, la seva nota era inferior respecte altres treballs de menys qualitat. Fer un treball d'electr√≤nica o programaci√≥ d√≥na m√©s facilitats de diferenciar-se.
 
 
 ## Disclaimer
-Tothom Ès lliure de baixar-se, modificar i treballar amb el present en aquest repositori. No es recomana copiar.
+Tothom √©s lliure de baixar-se, modificar i treballar amb el present en aquest repositori. Es recomana inspirar-se, per√≤ no copiar.
 
 L'autor d'aquest repositori no assegura resultats als que utilitzin els seus fitxers i segueixin les seves recomanacions. 
