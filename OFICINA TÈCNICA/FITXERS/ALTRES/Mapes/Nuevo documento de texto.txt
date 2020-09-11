@@ -1,0 +1,40 @@
+Per editar una pregunta, podeu accedir a un qüestionari dels que ja tenim creats, a l'esquerra editar la qüestió, i després a la part superior anem a "Banc de preguntes" des d'on podem crear una nova pregunta. Triarem que sigui calculada si volem que es generin uns nombres aleatoris entre els marges que nosaltres decidim i l'alumne hagi de calcular un resultat numèric.
+
+Categoria PARÀMETRES GENERALS
+
+És on s'escriu l'enunciat de la pregunta i es visualitzen els comodins que tenim creats en la categoria en què estem. Els comodins no són res més que les variables que creem i prendran valors aleatoris.
+
+Per inserir una variable feu-ho com "{x}". Per exemple, podria escriure: "un cotxe es mou a una velocitat {v} durant un temps {t}, quina distància haurà recorregut en aquest temps?". 
+
+Categoria RESPOSTA
+
+Partint de l'enunciat fictici anterior, dins el camp de "Fórmula 1 de resposta =" hauríem d'escriure "{v}*{t}". 
+
+La tolerància és recomenable posar-la si preveiem que l'estudiant arrodoneixi i no volem que això li costi la pregunta. La tolerància relativa es dona en tant per u.
+
+Categoria TRACTAMENT DE LES UNITATS
+
+CALCULADA SIMPLE
+Cerca els comodins {x...} a les fòrmules de les respostes correctes.
+Cliquem i apareix una categoria
+Paràmetres dels comodins emprats per a generar els valors.
+Categoria 
+Valors dels comodins queden fixes, no es generen aleatòriament!
+
+CALCULADA 
+La teclegem i després ens demana els comodins
+
+
+{v}*exp(-{k}*{t}/{m}) + {m}*{9.8}*(exp(-{k}*{t}/{m})-1)/{k}
+
+
+https://docs.moodle.org/all/es/Tipo_de_Pregunta_Calculada
+https://docs.moodle.org/all/es/Tipo_de_Pregunta_Calculada_Simple
+
+Ens diuen que una massa {m}Kg unida a una molla està a {x}m de la posició d'equilibri en l'instant inicial, moment pel qual porta una velocitat de {v}m/s. La constant de la molla és de {k}N/m.
+
+Si sabem que la posició ve donada per x(t)=A*sin(w*t + phi), troba phi, en radians.
+atan2({x},({v}/(pow( {k}/{m},0.5))))
+
+
+Un cos de 10g és llançat amb una velocitat inicial de 50m/s des d’una posició    verticalment. Considereu que la força d’arrossegament és proporcional a la velocitat amb una constant . Suposeu que . 

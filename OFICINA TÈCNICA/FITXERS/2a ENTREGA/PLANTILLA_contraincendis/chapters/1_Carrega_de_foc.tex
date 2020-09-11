@@ -1,0 +1,245 @@
+\chapter{\uppercase{Protecció contra incendis}}
+A continuació s'exposen els càlculs de càrrega de foc per determinar el nivell intrínsec d'incendi de l'obrador, amb el qual es pot classificar la instal·lació. Seguidament es detalla la instal·lació contra incendis existent a l'obrador i es consultat si és correcta; el mateix es fa pels materials. Finalment s'avaluen els recorreguts d'evacuació i la senyalització d'aquests. Es consulten les normatives indicades anteriorment.
+
+\section{\uppercase{Càrrega de foc}}
+%capítol de generalitats? i conclusions?
+La càrrega de foc, com indica el seu nom, és la manera de comptabilitzar el rics d'incendi d'un espai o activitat. Depenent de la càrrega de foc calculada una activitat es pot legalitzar o no. Per calcular la càrrega de foc hi ha dues maneres: una és calculant la càrrega de foc de cada dependència o espai i ponderant-les; l'altra és calculant la càrrega de foc de cada massa de l'activitat.\\
+\newline La fórmula per calcular la càrrega de foc d'un conjunt de superfícies, en $MJ/m^2$ és:
+\begin{equation}
+Q_s = \frac{\sum_{1}^{i}q_{si}S_iC_i}{A}R_a 
+\end{equation}
+$Q_s$: densitat de la càrrega de foc, ponderada i corregida, del sector o àrea d'incendi, en $MJ/m^2$.\\
+$q_{si}$: densitat de càrrega de foc tabulada segons els diferents processos, en $MJ/m^2$.\\
+$C_i$: coeficient adimensional que pondera el grau de perillositat per combustió dels combustibles.\\ 
+$S_i$: superfície de cada zona amb un procés diferent i densitat de càrrega de foc diferent, en $m^2$.\\
+$R_a$: coeficient adimensional que corregeix el grau de perillositat per l'activació, inherent a l'activitat industrial.\\
+$A$: superfície construïda del sector d'incendi, en $m^2$.\\
+\newline Per calcular la carrega de foc d'un magatzem, en $MJ/m^2$:
+\begin{equation}
+Q_s = \frac{\sum_{1}^{i}q_{vi}C_ih_is_i}{A}R_a 
+\end{equation}
+$q_{vi}$:càrrega de foc aportada per cada $m^3$ de cada zona amb diferent emmagatzematge, en $MJ/m^3$.\\
+$h$: altura d'emmagatzematge de combustibles, en $m$.\\
+$s_i$: superfície ocupada en planta per cada zona amb diferent emmagatzematge, en $m^2$.\\
+\newline Per calcular la càrrega de foc es decideix dividir l'obrador en quatre zones: dues de magatzems i cambres de fred, producció, i oficina i altres. A continuació es donen més detalls d'aquests agrupaments. El factor $R_a$ és el màxim valor que tinguem si aquella activitat ocupa el 10\% o més del total de superfície de l'agrupament que hem escollit.\\
+\newline Un agrupament és el de la cambra de congelació de sortida i el de la cambra frigorífica de sortida. Per calcular la seva càrrega de foc es fa servir la fórmula de magatzems.
+%
+\begin{table}[H]
+\footnotesize
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[2, l]|X[1, r]|X[0.5, r]|X[r]|X[0.5, r]|X[r]|}%{X | c c c} 
+ \hline
+Estances & Superfície ($m^2$)& Descripció & $q_i$ (MJ/$m^2$) & $C_i$ & Altura de càlcul (m) & $R_a$ & $q_{i}S_ih_iC_i$ (MJ) \\
+ \hline \hline 
+Fred sortida & 17,53 & Armaris frigorífics & 300 & 1,0 & 1,0 & 1,0 & 5.259,0 \\ \hline
+Congelador sortida & 17,53 & Congelats & 372 & 1,0 & 1,0 & 1,0 & 6.521,2 \\ \hline
+\hline
+Total & 35,06 & & & & & 1,0 & 11.780,2 \\ \hline
+Càrrega de foc & \multicolumn{6}{c|}{} & 336,0 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada de cambres de sortida}
+\end{center}
+\end{table}
+\noindent El següent agrupament comprèn el magatzem, la cambra frigorífica de l'entrada i la cambra de congelació de l'entrada. També es fa servir la fórmula de magatzem per calcular la seva càrrega de foc.
+%
+\begin{table}[H]
+\footnotesize
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[2, l]|X[1, r]|X[0.5, r]|X[r]|X[0.5, r]|X[r]|}%{X | c c c} 
+ \hline
+Estances & Superfície ($m^2$)& Descripció & $q_i$ (MJ/$m^2$) & $C_i$ & Altura de càlcul (m) & $R_a$ & $q_{i}S_ih_iC_i$ (MJ) \\
+ \hline \hline 
+Magatzem & 17,36 & Alimentació, matèries primes & 3.400 & 1,0 & 0,2 & 2,0 & 11.804,8 \\ \hline
+Fred entrada & 19,76 & Congelats & 300 & 1,0 & 0,8 & 1,0 & 4.742,4 \\ \hline
+Congelador entrada & 19,79 & Congelats & 372 & 0,8 & 1,0 & 1,0 & 5.889,5 \\ \hline
+\hline
+Total & 56,91 & & & & & 2,0 & 22.436,7 \\ \hline
+Càrrega de foc & \multicolumn{6}{c|}{} & 788,5 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada de magatzem i cambres d'entrada}
+\end{center}
+\end{table}
+\noindent La zona de producció té la cuina, la sala de preparació, l'entrada, la venda al públic, la sala de residus i la sala amb els productes de neteja.
+%
+\begin{table}[H]
+\footnotesize
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[2, l]|X[1, r]|X[0.5, r]|X[0.5, r]|X[r]|}%{X | c c c} 
+ \hline
+Estances & Superfície ($m^2$)& Descripció & $q_i$ (MJ/$m^2$ & $C_i$ &  $R_a$ & $q_{i}S_iC_i$ (MJ) \\
+ \hline \hline 
+Preparació & 48,26 & Embalatge de productes alimentaris & 800 & 1,0  & 1,5 & 38.608,0 \\ \hline
+Cuina & 265,75 & Alimentació, plats precuinats & 200 & 1,0 & 1,0 & 53.510,0 \\ \hline
+Entrada & 35,53 & Alimentació, embalatge & 800 & 1,0 & 1,5 & 28.424,0 \\ \hline
+Venda al públic & 37,38 & Expedició de productes alimentaris & 800 & 1,0 & 1,5 & 29.904,0 \\ \hline
+Sala de residus & 16,08 & Alimentació, embalatge & 800 & 1,0 & 1,5 & 12.846,0 \\ \hline
+Neteja & 3,96 & Neteja química & 300 & 1,3 & 1,5 & 1.544,4 \\ \hline
+\hline
+Total & 406,96 & & & & 1,5 & 164.494,4 \\ \hline
+Càrrega de foc & \multicolumn{5}{c|}{} & 606,3 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada de producció}
+\end{center}
+\end{table}
+\noindent Finalment, l'últim agrupament és per la zona amb l'oficina, els vestidors, la recepció, el menjador, els arxius i la sala de la caldera.
+%
+\begin{table}[H]
+\footnotesize
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[2, l]|X[1, r]|X[0.5, r]|X[0.5, r]|X[r]|}%{X | c c c} 
+ \hline
+Estances & Superfície ($m^2$)& Descripció & $q_i$ (MJ/$m^2$ & $C_i$ &  $R_a$ & $q_{i}S_iC_i$ (MJ) \\
+ \hline \hline 
+Caldera & 4,48 & Calderes, edificis de & 200 & 1,6  & 1,0 & 1.433,6 \\ \hline
+Vestidors 1 & 25,33 & Guarda roba, armaris de fusta & 400 & 1,0 &  1,0 & 10.132,0 \\ \hline
+Vestidors 2 & 25,33 & Guarda roba, armaris de fusta & 400 & 1,0 &  1,0 & 10.132,0 \\ \hline
+Menjador & 31,44 & Alimentació, plats precuinats & 200 & 1,0 &  1,0 & 6.288,0 \\ \hline
+Oficina & 19,32 & Oficines tècniques & 600 & 1,0 &  1,0 & 11.592,0 \\ \hline
+Recepció & 14,95 & Mobles de fusta & 500 & 1,0 &  1,5 & 7.475,0 \\ \hline
+Arxius & 9,45 & Procés de dades, sala d'ordinador & 400 & 1,0 & 1,5 & 3.780,0 \\ \hline
+\hline
+Total & 301,07 & & & & 1,5 & 50.832,6 \\ \hline
+Càrrega de foc & \multicolumn{5}{c|}{}& 253,3 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada per oficines i zones comunes}
+\end{center}
+\end{table}
+%
+\noindent Amb això podem calcular la càrrega de foc en $MJ/m^2$. Per fer-ho es pondera la càrrega de foc de cada zona segons l'àrea d'aquesta.
+% No apareix en cursiva
+%\begin{align}
+%\begin{split}
+%Q_s = \frac{\sum_{1}^{i}q_{i}S_iC_i}{A}R_a \\
+%\end{split}\\
+%\begin{split}
+%Q_s = \frac{383193,4 * 1}{800} = 479,0 \ \ MJ/m^2
+%\end{split}
+%\end{align}
+%
+\begin{equation}
+Q_e = \frac{\sum_{1}^{i}Q_{si}A_i}{\sum_{1}^{i}A_{i}}
+\end{equation}
+%\begin{equation}
+%Q_s = \frac{784,89*95,93 + 581,85*386,92 + 240,42 * 317,15}{95,93 + 386,92 + 317,15} = 470,84 \ \ MJ/m^2
+%\end{equation}
+
+\noindent El resultat del càlcul indica la càrrega de foc mitjana de la nau, en aquest cas és de 474,6 MJ/$m^2$  \\
+%
+%
+%
+%
+%
+%
+%
+%
+\newline Com s'ha comentat, una altra manera de calcular la càrrega de foc és considerant totes les masses existents a l'activitat i els seus poders calorífics. D'aquesta manera podem conèixer la quantitat d'energia que tenim en $MJ$. 
+\begin{equation}
+Q_s = \frac{\sum_{1}^{i}G_iq_{i}C_i}{A}R_a
+\end{equation}
+\noindent $C_i$: coeficient adimensional que pot valer 1, 1,3 o 1,6 en funció de la perillositat per combustió. S'ha consultat el catàleg de la CEA "Búsqueda y validación de parámetros de la carga de fuego en establecimientos industriales" \ per obtenir el seus valors. Aquest catàleg és vàlid fer-lo servir segons la normativa.\\
+$R_a$: corregeix el grau de perillositat per l'activació. També es troba al catàleg de la CEA. La normativa no defineix de forma clara el criteri per escollir una valor o altre. S'ha decidit escollir el més desfavorable.\\
+\newline Per la zona de cambres de sortida es tenen en compte les següents masses:
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+Productes & Poder calorífic ($MJ/kg$)& Massa ($kg$) & $C_i$ & $R_a$ & $G_iq_{i}C_i$ ($MJ$) \\
+ \hline \hline 
+Oli mineral & 42,0 & 15 & 1,3 & 2 & 819,0 \\ \hline
+Oli d'oliva & 42,0 & 15 & 1,3 & 2 & 819,0 \\ \hline
+Alcohol etílic & 25,1 & 25 & 1 & 1 & 627,5 \\ \hline
+Sucre & 16,7 & 10 & 1 & 2 & 167,0 \\ \hline
+Cafè & 16,7 & 50 & 1 & 2 & 835,0 \\ \hline
+Xocolata & 25,1 & 20 & 1 & 1,5 & 502,0 \\ \hline
+Farina de blat & 16,7 & 25 & 1,3 & 2 & 542,8 \\ \hline
+Llet en pols & 16,7 & 25 & 1 & 2 & 417,5 \\ \hline
+Mantega & 37,2 & 20 & 1 & 1 & 744,0 \\ \hline
+Tè & 16,7 & 5 & 1 & 1 & 83,5 \\ \hline
+Panell d'alumini amb recobriment & 3,9 & 250 & 1 & 1 & 975,0 \\ \hline \hline
+Total & & & & 2 & 6.532,3 \\ \hline
+Càrrega de foc, S=39,02 $m^2$ & \multicolumn{4}{c|}{} & 334,8 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada per masses en cambres de fred de sortida}
+\end{center}
+\end{table}
+
+\noindent Els aliments del magatzem i les cambres de fred d'entrada, tot i que en quantitats diferents, són els mateixos que els de l'agrupament anterior.
+
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+Productes & Poder calorífic ($MJ/kg$)& Massa ($kg$) & $C_i$ & $R_a$ & $G_iq_{i}C_i$ ($MJ$) \\
+ \hline \hline 
+Oli mineral & 42,0 & 50 & 1,3 & 2 & 2.730,0 \\ \hline
+Oli d'oliva & 42,0 & 50 & 1,3 & 2 & 2.730,0 \\ \hline
+Alcohol etílic & 25,1 & 25 & 1 & 1 & 627,5 \\ \hline
+Sucre & 16,7 & 10 & 1 & 2 & 167,0 \\ \hline
+Cafè & 16,7 & 50 & 1 & 2 & 835,0 \\ \hline
+Xocolata & 25,1 & 20 & 1 & 1,5 & 502,0 \\ \hline
+Farina de blat & 16,7 & 450 & 1,3 & 2 & 9.769,5 \\ \hline
+Llet en pols & 16,7 & 50 & 1 & 2 & 835,0 \\ \hline
+Mantega & 37,2 & 50 & 1 & 1 & 1.860,0 \\ \hline
+Tè & 16,7 & 5 & 1 & 1 & 83,50 \\ \hline
+Panell d'alumini amb recobriment & 3,9 & 250 & 1 & 1 & 975,0 \\ \hline \hline
+Total & & & & 2 & 21.114,5 \\ \hline
+Càrrega de foc, S=56,91 $m^2$ & \multicolumn{4}{c|}{} & 742,0 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada per masses en magatzem i cambres de fred d'entrada}
+\end{center}
+\end{table}
+
+\noindent A continuació la càrrega de foc calculada per masses de la zona de producció, la qual comprèn la cuina, la sala de preparació, la sala de residus i l'entrada.
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+Productes & Poder calorífic ($MJ/kg$)& Massa ($kg$) & $C_i$ & $R_a$ & $G_iq_{i}C_i$ ($MJ$) \\
+ \hline \hline 
+ Oli mineral & 42,0 & 5 & 1,3 & 2,0 & 273,0 \\ \hline
+ Oli d'oliva & 42,0 & 5 & 1,3 & 2,0 & 273,0 \\ \hline
+ Mantega & 37,2 & 5 & 1 & 1,0 & 186,0 \\ \hline
+ Farina de blat & 16,7 & 10 & 1,3 & 2 & 217,1 \\ \hline
+Polièster & 25,1 & 200 & 1 & 1,0 & 5.020,0 \\ \hline
+Polietilè & 42,0 & 300 & 1 & 1,0 & 12.600,0 \\ \hline
+Acer inoxidable & 111,0 & 1.300 & 1 & 1,0 & 144.300,0 \\ \hline
+Cartró & 15,6 & 200 & 1,3 & 1,5 & 4.056,0 \\ \hline
+Panell d'alumini amb recobriment & 3,9 & 200 & 1 & 1,0 & 780,0 \\ \hline \hline
+Total & & & & 2,0 & 123.305,1 \\ \hline
+Càrrega de foc, S=403 $m^2$ & \multicolumn{4}{c|}{} & 611,9 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada per masses en producció}
+\end{center}
+\end{table}
+
+\noindent En quart lloc s'indica la càrrega de foc calculada per masses a l'oficina i les zones comunes, com vestidors, menjador, passadissos... Algunes masses amb poca quantitat s'han assimilat amb les indicades a continuació.
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[1.5, l]|X[r]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+Productes & Poder calorífic ($MJ/kg$)& Massa ($kg$) & $C_i$ & $R_a$ & $G_iq_{i}C_i$ ($MJ$) \\
+ \hline \hline 
+Fusta & 16,7 & 1500 & 1,0 & 2 & 25.050,0 \\ \hline
+Panell d'alumini amb recobriment & 3,9 & 500 & 1 & 1 & 1.950,0 \\ \hline
+Paper & 16,7 & 200 & 1,3 & 2 & 4.320,0\\ \hline \hline
+Total & & & & 2 & 31.342,0 \\ \hline
+Càrrega de foc, S=301,17 $m^2$ & \multicolumn{4}{c|}{} &  208,1 MJ/$m^2$ \\ \hline
+ \end{tabu}
+ \caption{Càrrega de foc calculada per masses en oficina i zones comunes}
+\end{center}
+\end{table}
+
+\noindent Altra vegada podem calcular la càrrega de foc ponderada de l'obrador.
+\begin{equation}
+Q_e = \frac{\sum_{1}^{i}Q_{si}A_i}{\sum_{1}^{i}A_{i}}
+\end{equation}
+\noindent El valor calculat, de 455,7 MJ/$m^2$, és molt proper a la càrrega de foc ponderada fent càlculs per superfícies i volums en el cas dels magatzems. Considerem, per tant, que els càlculs per masses són correctes.
+
+%\clearpage

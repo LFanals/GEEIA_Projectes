@@ -1,0 +1,6 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{\numberline {1}\uppercase {Generalitats}}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}\uppercase {Sorolls i vibracions}}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}\uppercase {Sorolls}}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}\uppercase {Vibracions}}{7}{section.2.2}% 
+\contentsline {chapter}{\numberline {3}\uppercase {Conclusi\IeC {\'o}}}{9}{chapter.3}% 

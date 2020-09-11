@@ -1,0 +1,133 @@
+\chapter{\uppercase{Distribució general}}
+%Càlculs
+\section{Coeficients de simultaneïtat i arrencada}
+Pel càlcul de les seccions dels conductors cal tenir en compte els factors de simultaneïtat d'alguns elements i els factors que marca el REBT: 1,25 pel motor elèctric de més potència de la línia, tal com es detalla a la ITC-47; i 1,8 per les lluminàries amb descàrrega, tal com s'indica a la ITC-44.\\
+\newline Màquines com els extractors, les màquines buit, les màquines de fred, les neveres i congeladors disposen de motors elèctrics. El rentaplats també té motor elèctric, però la majoria de potència que consumeix ho fa per escalfar aigua, així que no s'aplica cap factor.\\
+\newline En la nostra instal·lació no hi ha cap enllumenat amb descàrrega, totes les lluminàries són de tipus LED.
+%
+%
+%
+%
+\section{Agrupament de línies}
+S'agrupen les línies tenint en compte si el subministrament és trifàsic o monofàsic. S'intenta, en la mesura del possible, que tots els grups tinguin potències similars. És per això que el diferencial que agrupa les 4 línies monofàsiques és de 4 pols: els 3 conductors de fase passaran per aquest diferencial i s'alimentaran les diferents línies monofàsiques amb diferents fases. Així es pot aconseguir una instal·lació trifàsica bastant ben equilibrada.\\
+\newline Es preveu utilitzar safata foradada en certs trams i muntatge superficial en altres. Pel REBT s'escull el muntatge B2, considerant que només tenim aquest muntatge, és el cas més desfavorable. L'aïllament serà EPR.
+%
+% \small
+\subsection{Agrupament 1}
+Comprèn les línies L1, L2, L3 i L4. Són monofàsiques però com s'ha comentat s'alimenten amb fases diferents. L1 i L2 són línies d'enllumenat i L3 i L4 són línies de força per màquines monofàsiques. El factor de potència d'aquestes línies es considera 1.
+%
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Intensitat (A) & Distància màxima (m) & Secció ($mm^{2}$) & Caiguda de Tensió (\%) & REBT (A)& PIA (A)\\
+ \hline \hline 
+L1 & Enllumenat habitacions i cambra& 1.370,5 & 5,96 & 55 &2x2,5 + 2,5& 2,04 & 25 & 10 \\ \hline
+L2 & Enllumenat cuina & 1.476 \ \ \ \  & 6,42 & 47 &2x2,5 + 2,5& 1,87 & 25 & 10 \\ \hline 
+L3 & Força oficina, menjador, màquines de buit & 7.775 \ \ \ \  & 33,80 & 51 &2x10 + 10& 2,68 & 60 & 40 \\ \hline 
+L4 & Força cuina & 7.235 \ \ \ \  & 31,46 & 33 &2x6 + 6& 2,67 & 44 & 40 \\ \hline 
+ \hline
+ Total & & 8.900,5 & 38,35 & & & & & 80 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 1}
+\end{center}
+\end{table}
+
+
+\subsection{Agrupament 2}
+Aquest agrupament és purament per la línia que alimenta els rentaplats de la cuina, la L5. Aquests rentaplats consumeixen molta potència perquè escalfen aigua; el seu motor consumeix poca potència, per això no se'ls aplica cap factor d'arrencada. El factor de potència és de 0,95. 
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Intensitat (A) & Distància màxima (m) & Secció ($mm^{2}$) & Caiguda de Tensió (\%) & REBT (A)& PIA (A)\\
+ \hline \hline 
+L5 & Rentaplats cuina & 36.000 & 54,92 & 54 &4x16 + 16& 1,44 & 70 & 63 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 2}
+\end{center}
+\end{table}
+
+\subsection{Agrupament 3}
+Aquest agrupament alimenta els dos extractors, que van amb motor elèctric, i els equips de les cambres de fred. Per tant, s'aplica el factor d'arrencada de 1,25 a un dels extractors, ja que aquests consumeixen més que els equips de fred. El factor de potència és de 0,9.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Intensitat (A) & Distància màxima (m) & Secció ($mm^{2}$) & Caiguda de Tensió (\%) & REBT (A)& PIA (A)\\
+ \hline \hline 
+L6 & Extractors i cambres de fred & 19.000 & 30,60 & 36 &4x10 + 10& 0,86 & 52 & 40 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 3}
+\end{center}
+\end{table}
+
+\subsection{Agrupament 4}
+Aquest agrupament alimenta l'abatidor de la sala de preparació. S'aplica el factor d'arrencada de 1,25. El seu factor de potència és de 0,95.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Intensitat (A) & Distància màxima (m) & Secció ($mm^{2}$) & Caiguda de Tensió (\%) & REBT (A)& PIA (A)\\
+ \hline \hline 
+L7 & Abatidor sala de preparació & 16.975 & 25,90 & 44 &4x10 + 10& 0,84 & 52 & 40 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 4}
+\end{center}
+\end{table}
+%
+%
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[3, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat (A) & Intensitat PIA (A) & Classe & Nombre de pols \\
+ \hline \hline 
+L1 & Enllumenat habitacions i cambres & 5,61 & 10 & C & 2 \\ \hline
+L2 & Enllumenat cuina & 6,42 & 10 & C & 2 \\ \hline
+L3 & Força oficina, menjador, màquines de buit & 33,80 & 40 & C & 2 \\ \hline
+L4 & Força cuina & 31,45 & 40 & C & 2 \\ \hline
+L5 & Rentaplats cuina & 54,92 & 64 & C & 4 \\ \hline
+L6 & Extractors i cambres de fred & 30,60 & 40 & D & 4 \\ \hline
+L7 & Abatidor sala de preparació & 25,9 & 40 & C & 4 \\ \hline \hline
+L1+L2+L3+L4+L5+L6+L7 & IGA & 130,08 & 160 & C & 4 \\ \hline
+
+ \end{tabu}
+ \caption{Proteccions magnetotèrmiques de les línies}
+\end{center}
+\end{table}
+\noindent L'últim magnetotèrmic de la taula és un IGA de 160 A d'intensitat nominal, classe C i 4 pols; situat aigües amunt de les línies. Les màquines i l'enllumenat poden arribar a estirar 130,08 A. El Vademècum indica que cal protegir la instal·lació per corrents superiors a aquest, els quals podrien danyar la instal·lació.
+
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[3, l]|X[2, l]|X[r]|X[r]|X[1,r]|X[1,r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat (A) & Intensitat nominal (A) & Sens. (mA) & Classe & Nombre de pols \\
+ \hline \hline 
+L1+L2+L3+L4 & Enllumenat i força monofàsics & 77,3 & 80 & 30 & A & 4 \\ \hline
+L5 & Rentaplats cuina & 54,92 & 63 & 30 & A & 4 \\ \hline
+L6 & Extractors i cambres de fred & 30,60 & 40 & 100 & B & 4 \\ \hline
+L7 & Abatidor de la sala de preparació & 25,9 & 40 & 30 & A & 4 \\ \hline \hline
+L1+L2+L3+L4+L5+L6+L7 & Totes les línies & 130,08 & 160 & 300 & A & 4 \\ \hline
+ \end{tabu}
+ \caption{Proteccions diferencials de la instal·lació}
+\end{center}
+\end{table}
+\noindent L'últim diferencial de la taula és general, està en sèrie amb l'IGA i, tot i que no obligatori, decidim instal·lar-lo seguint el Vademècum com a recomanació.
+
+
+
+
+\clearpage

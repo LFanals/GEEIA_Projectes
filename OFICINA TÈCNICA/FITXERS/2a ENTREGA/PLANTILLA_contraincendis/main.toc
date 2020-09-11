@@ -1,0 +1,10 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {catalan}{}
+\contentsline {chapter}{\numberline {1}\uppercase {Generalitats}}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}\uppercase {Protecci\IeC {\'o} contra incendis}}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}\uppercase {C\IeC {\`a}rrega de foc}}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}\uppercase {Classificaci\IeC {\'o} de la insta\leftllkern =0pt\rightllkern =0pt\raiselldim =0pt\setbox 0\hbox {L}\setbox 1\hbox {L\/}\setbox 2\hbox {.}\advance \raiselldim by .5\ht 0\advance \raiselldim by -.5\ht 2\leftllkern =-.125\wd 0\advance \leftllkern by \wd 1\advance \leftllkern by -\wd 0\rightllkern =-\wd 0\divide \rightllkern by 6\advance \rightllkern by -\wd 1\advance \rightllkern by \wd 0\discretionary {L-}{L}{\hbox {L}\kern \leftllkern \raise \raiselldim \hbox {.}\kern \rightllkern \hbox {L}}aci\IeC {\'o}}}{8}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}\uppercase {Insta\leftllkern =0pt\rightllkern =0pt\raiselldim =0pt\setbox 0\hbox {L}\setbox 1\hbox {L\/}\setbox 2\hbox {.}\advance \raiselldim by .5\ht 0\advance \raiselldim by -.5\ht 2\leftllkern =-.125\wd 0\advance \leftllkern by \wd 1\advance \leftllkern by -\wd 0\rightllkern =-\wd 0\divide \rightllkern by 6\advance \rightllkern by -\wd 1\advance \rightllkern by \wd 0\discretionary {L-}{L}{\hbox {L}\kern \leftllkern \raise \raiselldim \hbox {.}\kern \rightllkern \hbox {L}}aci\IeC {\'o} contra incendis}}{9}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}\uppercase {Tipus de materials}}{11}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}\uppercase {Condici\IeC {\'o} d'evacuaci\IeC {\'o} i senyalitzaci\IeC {\'o}}}{12}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}\uppercase {Conclusi\IeC {\'o}}}{14}{chapter.3}% 

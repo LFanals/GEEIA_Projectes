@@ -1,0 +1,23 @@
+\chapter{\uppercase{Càlculs}}
+En algunes línies es considera que el factor de potència és unitari. A la realitat mai valdrà exactament 1, però sí que es preveu que tingui un valor molt semblant. Les màquines que s'han escollit tenen un factor de potència proper a l'unitari però diferent de 1.\\
+\newline Per calcular la intensitat de les línies monofàsiques es fa servir la següent fórmula:
+\begin{equation}
+I_{linia} = \frac{P}{V*\cos(\phi)}
+\end{equation}
+En trifàsic, l'equació que s'utilitza és:
+\begin{equation}
+I_{linia} = \frac{P}{\sqrt3*V*\cos(\phi)}
+\end{equation}
+És important calcular la caiguda de tensió a les línies per tal de dimensionar-les. La caiguda de tensió en línies d'enllumenat no pot ser superior al 3\% i en línies de força no pot ser superior al 5\% de la tensió de subministrament.\\
+\newline En monofàsic:
+\begin{equation}
+e(\%)=\frac{P}{V}\frac{2*l}{k*S}
+\end{equation}
+En trifàsic, l'equació que s'utilitza és:
+\begin{equation}
+e(\%)=\frac{P}{V}\frac{l}{k*S}
+\end{equation}
+S'utilitzen cables de coure, per tant, $k = 56 \frac{m}{mm^{2}\si{\ohm}}$.\\
+\newline El dimensionament de les línies ha de permetre que les caigudes de tensió no superin els màxims indicats prèviament. Alhora, els cables han de poder admetre les intensitats calculades, per això ens guiem amb la taula de la ITC-19 del REBT. Finalment, cal escollir un interruptor magnetotèrmic d'intensitat nominal superior a la calculada per la línia i menor a l'admissible que marca la ITC-19.\\
+\newline Es combina el muntatge amb safata perforada al llarg del passadís principal de l'obrador amb muntatge superficial (B2) a la resta de zones. Per alimentar els punts de llum que no es troben tocant cap paret es fan passar els cables pel fals sostre. Els càlculs estan fets amb el cas més restrictiu: el muntatge superficial B2.\\
+\newline La instal·lació és trifàsica, per tant, hi ha 3 conductors de fase i un conductor de neutre. El conductor de terra transcorre per totes les línies i té una secció igual als conductors de les línies, tal com s'indica al plànol. El neutre, que arriba per l'escomesa, també s'instal·la de la mateixa secció que els conductors de fase.

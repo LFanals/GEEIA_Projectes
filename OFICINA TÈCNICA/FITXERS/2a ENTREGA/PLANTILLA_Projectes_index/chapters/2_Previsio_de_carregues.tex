@@ -1,0 +1,114 @@
+\chapter{\uppercase{Previsió de càrregues}}
+\section{Enllumenat}
+L'enllumenat que es pretén utilitzar són bombetes LED, fluorescents LED i llums d'emergència. Els tres tipus de fonts de llum tenen consums baixos i no s'ha d'aplicar cap factor per l'arrencada.\\
+\newline Els llums d'emergència es trien del tipus no permanent, és a dir, disposen d'una bateria i només s'encenen quan la tensió baixa del 70\% respecte la tensió nominal.  Per la previsió de càrregues no es tenen en compte perquè un cop carregats el seu consum és quasi nul.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabularx}{\textwidth}{|l|X|r|r|}%{c | c c c} 
+ \hline
+ Zona & Elements i potència & Quantitat & Potència \\
+ \hline
+ Recepció & Fluorescent 18 W & 4 & 72 \ \ \ W\\
+ Oficina & Fluorescents 18 W & 8 & 144 \ \ \ W\\
+ Menjador & Fluorescents 18 W & 8 & 144 \ \ \ W\\
+ Vestidors & Fluorescent 18 W, bombeta 5,5 W, extractor 20 W & 4, 4, 4 & 174 \ \ \ W\\
+ Caldera & Bombeta 5,5 W & 1 & 5,5 W\\
+ Sortida de cuinats & Fluorescent 18 W & 6 & 108 \ \ \ W\\
+ Cambres i magatzem & Fluorescent 18 W & 20 & 360 \ \ \ W\\
+ Entrada d'aliments & Fluorescent 18 W & 8 & 144 \ \ \ W\\
+ Arxiu & Fluorescent 18 W & 1 & 18 \ \ \ W\\
+ Sala de preparació & Fluorescent 18 W & 8 & 144 \ \ \ W\\
+ Sala de venta al públic & Fluorescent 18 W & 6 & 108 \ \ \ W\\
+ Sala de residus & Fluorescent 18 W & 4 & 72 \ \ \ W\\
+ Sala de productes de neteja & Fluorescent 18 W & 1 & 18 \ \ \ W\\
+ Cuina & Fluorescent 18 W & 64 & 1.152 \ \ \ W\\
+ 
+  
+
+ \hline
+ Total enllumenat & & & 2.663,5 W\\
+ \hline
+ \end{tabularx}
+ \caption{Previsió de càrregues d'enllumenats}
+\end{center}
+\end{table}
+%
+%
+%
+%
+%
+\section{Força}
+La potència necessària per les màquines és molt més elevada que la dels enllumenats. \\
+%
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabularx}{\textwidth}{|X|r|r|r|}%{c | c c c} 
+ \hline
+ Descripció & Potència unitària & Quantitat & Potència \\
+ \hline
+ Rentaplats & 12.000 W & 3 &  36.000 W \\
+ Màquina de buit & 1.100 W & 3 &  3.300 W \\
+ Forn & 2.400 W & 4 &  9.600 W\\ 
+ Congelador & 1.262 W & 2 &  2.524 W \\
+ Nevera & 1.000 W & 3 &  3.000 W \\
+ Fregidora & 200 W & 4 &  800 W \\
+ Abatidor & 13.580 W & 1 &  13.580 W\\ 
+ Caldera & 100 W & 1 &  100 W \\
+ Màquines de fred per congelador & 3.200 W & 2 & 6.400 W \\
+ Màquines de fred per nevera & 1.800 W & 2 &  3.600 W \\
+ Extractor & 4.000 W & 2 & 8.000 W \\
+ Ordinador & 500 W & 3 &  1.500 W \\
+ Microones & 800 W & 5 & 4.000 W \\
+ \hline
+ Total força & & &  92.404 W\\
+ \hline
+ \end{tabularx}
+ \caption{Previsió de càrregues de força}
+\end{center}
+\end{table}
+%
+%
+%
+
+
+\section{Resum de previsió de càrregues}
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabular}{|l|r|}%{c | c c c} [table-format = 10.5]
+ \hline
+ Descripció  & Potència \\
+ \hline
+  Enllumenats & 2.663,5 W \\
+  Força &  92.404 \ \ \ W \\ 
+ \hline
+ Potència instal·lada & 95.067,5 W\\
+ \hline
+ \end{tabular}
+ \caption{Potència instal·lada}
+\end{center}
+\end{table}
+
+En aquesta instal·lació hi ha bastants equips de fred que en un règim normal consumeixen una potència menor a la indicada pel fabricant. A la sala de preparació hi ha 3 màquines de buit les quals funcionen en pocs períodes de curta duració durant la jornada laboral. Els rentaplats, que tenen consums d'electricitat molt alts, només s'engeguen al final del dia, moment pel qual els forns, que també tenen consums elevats, no estan en funcionament. \\
+\newline Amb això explicat, decidim aplicar un factor de simultaneïtat a tota la instal·lació de 0,85.
+%
+\begin{table}[H]
+\begin{center}
+ \begin{tabular}{|l|r|}%{c | c c c} 
+ \hline
+  Potència instal·lada & 95.067,5 \ \ W \\
+  Coeficient de simultaneïtat &  0,85 \ \ \ \ \\ 
+ \hline
+ Potència útil & 80.807,4 \ \ W\\
+ \hline
+ \end{tabular}
+ \caption{Potència contractada}
+\end{center}
+\end{table}
+%
+\noindent La potència útil és de 80.807,4 W.
+
+
+\clearpage

@@ -1,0 +1,107 @@
+\chapter{\uppercase{Sorolls i vibracions}}
+Les activitats industrials utilitzen màquines. Algunes d'aquestes màquines tenen parts mòbils, vibren i són sorolloses. La legislació marca uns màxims permesos de soroll i vibracions que han de ser respectats.
+\section{\uppercase{Sorolls}}
+El que s'entén per soroll és la superposició d'ones acústiques de diferents freqüències. Les múltiples activitats que es porten a terme en els nuclis habitats poden donar lloc a problemes de contaminació acústica que causen molèsties als ciutadans.\\
+\newline L'annex 3 del Decret de Protecció contra la Contaminació Acústica de la Generalitat descriu la immissió sonora aplicable a l'ambient exterior produïda per les activitats, incloses les derivades de les relacions de veïns. Exposa els nivells màxims d'immissió segons la zona i segons l'horari. Indica com fer les mesures de forma correcta i quines equacions cal utilitzar.\\
+\newline Es poden determinar els nivells d'immissió mitjançant mesures. S'han realitzat mesures contínues durant tot el període d'avaluació. La diferència entre els valors màxims obtinguts ha estat menor de 3 dB(A), per tant, s'ha pogut fer la mitjana.\\
+\newline Els mesuraments s'han fet en un dia de Sol amb poca presència de vent; és el més habitual al polígon de l'obrador. Tot i això s'ha fet servir una pantalla paravent. El micròfon s'ha situat a una alçada de 1,5 metres a nivell de carrer, i a 1 metre de distància respecte la façana contigua a la cuina, que és on hi ha més soroll. S'ha calibrat l'aparell.\\
+\newline S'han mesurat 45 dB(A) quan les màquines de l'obrador estaven en funcionament i 33 dB(A) quan no. La diferència és major de 10 dB(A) i per tant no cal eliminar el nivell de soroll residual.\\
+\newline Per pendre mesures de soroll es fa servir la següent equació:
+\begin{equation}
+L_{Ar}= 10 \log\left ( \frac{1}{T} \sum_{i=1}^{n} \left ( T_{i}10^{\frac{L_{Ar,i}}{10}} \right ) \right )
+\end{equation}
+\noindent $L_{Ar}$: nivell d'avaluació del període.\\
+ $i$: cadascuna de les fases del soroll.\\
+ $T_{i}$: durada de la fase de soroll $i$ en minuts. La suma de tots el $T_i$ ha de ser $T$.\\
+ $T$: temps de mesura. 180 minuts de dia, 120 minuts a l'horari de vespre, 120 minuts a l'horari de nit.\\
+ $L_{Ar,i}$: nivell d'avaluació de la fase $i$. Es calcula amb:
+\begin{equation}
+L_{Ar,i} = L_{Aeq,Ti} + K_{f,i} + K_{t,i} + K_{i,i}
+\end{equation}
+\noindent $L_{Aeq,Ti}$: nivell de pressió acústica continu equivalent ponderat A, mesurat durant una fase de durada $T_i$.\\
+$K_{f,i}$, $K_{t,i}$, $K_{i,i}$: correccions de nivell per a la fase $i$. Baixes freqüències, tonals i impulsius respectivament. No s'apliquen al soroll residual.\\
+\newline La jornada laboral a l'obrador és de les 8:00 a les 16:00. Aquest període forma part completament del període de dia, el qual va de les 7:00 a les 21:00. Es pren $T=180$ minuts. Es fa una mesura contínua.\\
+%
+%
+%
+%
+\newline Per determinar si hi ha components de baixa freqüència es miren les octaves de 20 a 160 Hz i es calcula la diferència entre els valors obtinguts.
+\begin{equation}
+L_{f} = L_{Ceq,T} - L_{Aeq,T}
+\end{equation}
+\noindent $L_{Ceq,T}, L_{Aeq,T}$: resultat de la mitjana dels tres mesuraments vàlids, com ja s'ha comentat anteriorment.\\
+\newline Si la diferència $L_{Ceq,T} - L_{Aeq,T}$ és menor a 20 dB(A) es considera que no hi ha components de baixa freqüència significatius. A l'obrador, la diferència ha estat de 9 dB(A). Es pot dir que $K_f = 0$.\\
+\newline Per determinar si hi ha presència de components totals emergents es fa una anàlisi espectral cada terç d'octava, entre 20 i 10.000 Hz. Es calcula la diferència com:
+\begin{equation}
+L_t = L_f - L_s
+\end{equation}
+\noindent $L_f$: nivell de pressió acústica de la banda f que conté el to emergent.\\
+$L_s$: mitjana aritmètica dels nivells de la banda situada per immediatament per sobre i per sota de $f$.\\
+$L_f$ i $L_s$: mitjana energètica de les tres mesures preses com a vàlides.\\
+\newline S'ha calculat que \emph{$L_f$} a 50 Hz val 45 dB i que \emph{$L_s$} val 41 dB; la diferència és de 4 dB. Es determina, amb la taula del Decret, que es sobrepassa el nivell mínim audible $T_f$ a 50 Hz que és de 44,0 dB. Per tant, s'ha de considerar. Com que 4 està entre el rang $3 \leq  L_i \leq  6$,  $K_t = 3$.\\
+\newline Per determinar si el soroll té components impulsius en primer lloc es mesura simultàniament el nivell de pressió acústica contínua equivalent ponderat $A$, $L_{Aeq,Ti}$, amb la constant temporal d'impuls $I$, $L_{AIeq,Ti}$, durant un temps $T_i$. En el nostre cas, en què es fa continu, no té sentit fer el càlcul, el resultat és 0:
+\begin{equation}
+L_i = L_{AIeq,T} - L_{Aeq,T}
+\end{equation}
+\noindent $L_{AIeq,T}, L_{Aeq,T}$: resultat de la mitjana energètica dels tres mesuraments considerats vàlids.\\
+\newline En aquest cas $K_i = 0$.\\
+\newline Amb aquesta informació podem determinar que 
+\begin{equation}
+L_{Ar} = L_{Aeq} + K_{f} + K_{t} + K_{i}
+\end{equation}
+\noindent \emph{$L_{Aeq}$} val 45 dB(A) i \emph{$K_{f}$} val 3 dB(A); sumen 48 dB(A).
+\noindent Així, es conclou que la immissió a fora la nau causada per l'obrador és de 48 dB (A).\\
+\newline Per deferència s'inclou una taula amb el nivell sonor en dB(A) de les màquines que hi ha instal·lades dins la nau. Els valors són donats pels fabricants.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[l]|X[2, l]|X[0.6, r]|X[0.5, r]|}
+ \hline
+Màquina & Model & Quantitat & Soroll (dBA) \\
+ \hline \hline 
+Rentaplats & AD-125 SOFT HRS 400/230/230V 3N/3/1N 50H & 3 & 72,0 \\ \hline
+Forn & APE-201 400/230V 3N/3 50/60Hz & 4 & 60,0 \\ \hline
+Extractor & SP CRMT/4-315/130-4 & 2 & 78,0 \\ \hline
+Màquina de buit & SV-2-850L/100 230-400V 3N 50Hz & 3 & 63,0 \\ \hline
+Abatidor & CMKP-202D PAS S.P.CAL SUELO 400V 3N 50Hz , UCC-1052 No 400V 3N 50Hz & 1 & 60,0 \\ \hline
+Congelador & Polar CD085 & 2 & 40,0 \\ \hline
+Nevera & Polar CD084 & 2 & 40,0 \\ \hline
+Màquina de fred per congelador & BSB330DB11XX & 2 & 44,0 \\ \hline
+Màquina de fred per nevera & BSB220DA11XX & 2 & 40,0 \\ \hline
+ \end{tabu}
+ \caption{Nivells d'emissió de soroll donats pels fabricants}
+\end{center}
+\end{table}
+\noindent Com s'observa, bastantes màquines emeten més de 48 dB(A), que és el valor mesurat, però totes menys les màquines de fred se situen a l'interior de la nau. Cal tenir en compte que les parets de formigó de la nau, de 20 cm, tenen un aïllament acústic de 57 dB(A). La fórmula que relaciona l'aïllament amb els nivells de pressió sonora és:
+\begin{equation}
+D = L_1 - L_2
+\end{equation}
+\noindent D: aïllament acústic.\\
+$L_1$: nivell de pressió sonora a l'emissor.\\
+$L_2$: nivell de pressió sonora al local receptor.\\
+%
+%
+%
+%
+%
+%
+\newline L'Ajuntament de la Bisbal d'Empordà té un mapa de zones de sensibilitat acústica.\\
+\newline La nau està classificada com a tipus C amb un nivell de risc d'incendi intrínsec baix 2. Està situada en un polígon industrial, el mapa indica que la seva zona de sensibilitat acústica és C2. Els nivells màxims permesos a aquesta zona són:
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabular} {|l|r|r|r|}
+     \hline
+   Zona & \multicolumn{3}{| c |}{Valors límits d'immissió en dB(A)}\\
+    \hline
+    & $L_{d (7h-21h)}$ & $L_{d (21h-23h)}$ & $L_{d (23h-7h)}$ \\ \hline
+C2 - Predomini del sòl industrial & 70 & 70 & 60 \\ \hline
+
+ \end{tabular}
+ \caption{Valors d'immissió acústica en zona C a La Bisbal d'Empordà}
+\end{center}
+\end{table}
+%
+\noindent La jornada laboral a l'obrador és de 8:00 a 16:00, el límit d'immissió és de 70 dB(A). Els 48 dB(A), que es donen en el primer període únicament, compleixen perfectament amb els límits marcats per l'Ajuntament de La Bisbal d'Empordà.\\
+\newline Fora de la jornada laboral els equips de fred segueixen funcionant, però la resta de màquines estan apagades. Durant els tres períodes es compleix amb els límits d'immissió acústica marcats per l'Ajuntament de la Bisbal d'Empordà.
+

@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{\numberline {1}\uppercase {Introducci\IeC {\'o}}}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Antecedents}{3}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Objectiu}{3}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Abast}{3}{section.1.3}% 
+\contentsline {chapter}{\numberline {2}\uppercase {Caracter\IeC {\'\i }stiques de l'habitatge}}{4}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Irradiaci\IeC {\'o}}{4}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Consum energ\IeC {\`e}tic}{5}{section.2.2}% 
+\contentsline {chapter}{\numberline {3}\uppercase {Generador fotovoltaic i inversor}}{7}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Pot\IeC {\`e}ncia de la instal\IeC {\textperiodcentered }laci\IeC {\'o} fotovoltaica}{7}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Panell solar escollit}{9}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Associaci\IeC {\'o} de plaques}{10}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Inversor}{12}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}\uppercase {Instal\IeC {\textperiodcentered }laci\IeC {\'o} el\IeC {\`e}ctrica}}{15}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}L\IeC {\'\i }nies el\IeC {\`e}ctriques de la instal\IeC {\textperiodcentered }laci\IeC {\'o} fotovoltaica}{15}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Secci\IeC {\'o} dels conductors}{16}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Quadre el\IeC {\`e}ctric}{16}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}\uppercase {Placa electr\IeC {\`o}nica d'adquisici\IeC {\'o} de dades i comunicaci\IeC {\'o}}}{18}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Alimentaci\IeC {\'o}}{18}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Instrumentaci\IeC {\'o}}{19}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Multiplexor}{21}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Comunicaci\IeC {\'o}}{23}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}Circuit impr\IeC {\`e}s}{24}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}\uppercase {Programaci\IeC {\'o}}}{27}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Organigrama}{27}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}P\IeC {\`a}gina web}{29}{section.6.2}% 
+\contentsline {chapter}{\numberline {7}\uppercase {Resum del pressupost}}{33}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}\uppercase {Conclusi\IeC {\'o}}}{34}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}\uppercase {Relaci\IeC {\'o} de documents}}{35}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}\uppercase {Bibliografia}}{36}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}\uppercase {Glossari}}{37}{chapter.11}% 
+\contentsline {chapter}{\numberline {A}\uppercase {C\IeC {\`a}lculs}}{38}{appendix.A}% 
+\contentsline {chapter}{\numberline {B}\uppercase {Programa}}{42}{appendix.B}% 

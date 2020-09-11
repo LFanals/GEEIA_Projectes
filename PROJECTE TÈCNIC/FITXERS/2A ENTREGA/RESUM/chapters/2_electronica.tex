@@ -1,0 +1,15 @@
+\chapter{\uppercase{Placa electrònica d'adquisició de dades i comunicació}}
+
+L'inversor es pot connectar a Internet de manera que el client pot conèixer la generació d'energia, però no pot conèixer com està funcionant cada placa per separat. Per això es decideix dissenyar una placa electrònica\\
+\newline És la placa electrònica l'encarregada d'adquirir la tensió de cada panell i així complementar la informació que dona l'inversor. Si alguna fila de cel·les intenta passar a treballar com a receptora d'energia el díode en paral·lel actua i això es tradueix en una disminució de la tensió als terminals del panell.\\
+\newline Aquest equip electrònic dona la informació al client que li ha de permetre no només conèixer si alguna placa s'ombreja més sovint de l'esperat, sinó també saber si s'ha malmès alguna cel·la.\\
+\newline La placa treballa amb tensions d'alimentació de 5 V a i 3,3 V. Un convertidor de tensió anomenat SPX3819M5-L-3-3 juntament amb condensadors a l'entrada i a la sortida assegura una bona reducció de la tensió. Alguns components com l'ESP-12E s'alimenten a 3,3 V ja que és el nivell recomanat pel fabricant. Altres, com els amplificadors operacionals s'alimenten a 5 V degut a què aquests no són Rail-to-Rail.\\
+\newline El circuit d'instrumentació s'encarrega de reduir les tensions a nivells amb què es pugui treballar amb els amplificadors operacionals. Aquests fan la resta entre les tensions als terminals de cada placa. El resultat de la resta s'adequa al nivell de tensió permès de l'entrada del convertidor ADC del component ESP-12E.\\
+\newline Per tal de poder llegir les diferències de tensions de les 10 plaques, després de passar les senyals pel circuit d'instrumentació es decideix multiplexar les senyals amb un CD74HC4067M. Les 4 entrades d'aquest component van connectades a 4 pins de propòsit general de l'ESP-12E. El multiplexor té baixa impedància entre l'entrada seleccionada i la sortida, tot i això es fa servir un seguidor de tensió per aïllar l'etapa.\\
+\newline S'ha dissenyat una placa de circuit imprès de 8,4 cm x 10 cm aproximadament. La placa té dues capes i la majoria de components són SMD.
+
+
+
+\clearpage
+
+

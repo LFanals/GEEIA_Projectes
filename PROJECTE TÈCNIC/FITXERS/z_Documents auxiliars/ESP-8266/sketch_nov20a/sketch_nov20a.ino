@@ -1,0 +1,315 @@
+/*********
+Llorenç Fanals Batllori
+Graduat en Enginyeria Electrònica Industrial i Automàtica
+20/11/2019
+*********/
+
+#include <ESP8266WiFi.h> // Es carrega la llibreria Wi-Fi
+
+// Credencials de la xarxa Wi-Fi a què ens volem connectar
+const char* ssid     = "DESKTOP-E5M4HBA 4049";
+const char* password = "E^1w1736";
+
+// Port que volem utilitzar. El 80 és el port per defecte, així que teclejant la IP a un navegador en farem prou. Si fos un altre port la IP acabaria en ":número_port".
+WiFiServer server(80);
+
+
+unsigned long TempsActual = millis(); // Current time
+unsigned long TempsAnterior = 0; // Previous time
+const long TempsConnectat = 20000; // Define timeout time in milliseconds (example: 2000ms = 2s)
+
+
+#define files 24
+#define columnes 5
+
+float vector[files][columnes]; // vector de dades
+float vector2[files][columnes]; // vector de dades
+int i = 0; // iterador per files
+int j = 0; // iterador per columnes
+
+#define D0 16
+#define D1 5
+#define D2 4
+#define D3 0
+
+#define ENTRADA_ANALOGICA A0
+
+unsigned int hores_posada_marxa = 10; // l'hora en què es fa la posada en marxa
+unsigned int minuts_posada_marxa = 23; // a les 10:23 es fa la posada en marxa
+
+unsigned int hora_actual;
+float minuts_actual;
+unsigned int millis_anteriors;
+
+void inicialitza_vectors(){ // Emplena els vectors de dades fictícies. A còpia d'hores s'aniran reemplaçant per dades reals
+  
+  vector[0][0]=0; vector[0][1]=0; vector[0][2]=0; vector[0][3]=0; vector[0][4]=0;
+  vector[1][0]=0; vector[1][1]=0; vector[1][2]=0; vector[1][3]=0; vector[1][4]=0;
+  vector[2][0]=0; vector[2][1]=0; vector[2][2]=0; vector[2][3]=0; vector[2][4]=0;
+  vector[3][0]=0; vector[3][1]=0; vector[3][2]=0; vector[3][3]=0; vector[3][4]=0;
+  vector[4][0]=0; vector[4][1]=0; vector[4][2]=0; vector[4][3]=0; vector[4][4]=0;
+  vector[5][0]=0; vector[5][1]=0; vector[5][2]=0; vector[5][3]=0; vector[5][4]=0;
+  vector[6][0]=0; vector[6][1]=0; vector[6][2]=0; vector[6][3]=0; vector[6][4]=0;
+  vector[7][0]=3; vector[7][1]=10; vector[7][2]=14.3; vector[7][3]=17.2; vector[7][4]=21.3;
+  vector[8][0]=29.3; vector[8][1]=31.2; vector[8][2]=32.1; vector[8][3]=29.4; vector[8][4]=25.5;
+  vector[9][0]=31.6; vector[9][1]=31.5; vector[9][2]=27.5; vector[9][3]=27.2; vector[9][4]=22.2;
+  vector[10][0]=32.0; vector[10][1]=31.6; vector[10][2]=28; vector[10][3]=22.7; vector[10][4]=26.5;
+  vector[11][0]=28.1; vector[11][1]=27.1; vector[11][2]=31.7; vector[11][3]=27.9; vector[11][4]=32.5; // central, pic
+  vector[12][0]=26.4; vector[12][1]=21.5; vector[12][2]=29.6; vector[12][3]=31.1; vector[12][4]=31.6;
+  vector[13][0]=25.2; vector[13][1]=30.5; vector[13][2]=29.1; vector[13][3]=30.4; vector[13][4]=30.3;
+  vector[14][0]=29.3; vector[14][1]=29.4; vector[14][2]=28.6; vector[14][3]=29.5; vector[14][4]=29.4;
+  vector[15][0]=15.6; vector[15][1]=15.3; vector[15][2]=14.2; vector[15][3]=18.3; vector[15][4]=21.2;
+  vector[16][0]=0; vector[16][1]=0; vector[16][2]=0; vector[16][3]=0; vector[16][4]=0;
+  vector[17][0]=0; vector[17][1]=0; vector[17][2]=0; vector[17][3]=0; vector[17][4]=0;
+  vector[18][0]=0; vector[18][1]=0; vector[18][2]=0; vector[18][3]=0; vector[18][4]=0;
+  vector[19][0]=0; vector[19][1]=0; vector[19][2]=0; vector[19][3]=0; vector[19][4]=0;
+  vector[20][0]=0; vector[20][1]=0; vector[20][2]=0; vector[20][3]=0; vector[20][4]=0;
+  vector[21][0]=0; vector[21][1]=0; vector[21][2]=0; vector[21][3]=0; vector[21][4]=0;
+  vector[22][0]=0; vector[22][1]=0; vector[22][2]=0; vector[22][3]=0; vector[22][4]=0;
+  vector[23][0]=0; vector[23][1]=0; vector[23][2]=0; vector[23][3]=0; vector[23][4]=0;
+
+  vector2[0][0]=0; vector2[0][1]=0; vector2[0][2]=0; vector2[0][3]=0; vector2[0][4]=0;
+  vector2[1][0]=0; vector2[1][1]=0; vector2[1][2]=0; vector2[1][3]=0; vector2[1][4]=0;
+  vector2[2][0]=0; vector2[2][1]=0; vector2[2][2]=0; vector2[2][3]=0; vector2[2][4]=0;
+  vector2[3][0]=0; vector2[3][1]=0; vector2[3][2]=0; vector2[3][3]=0; vector2[3][4]=0;
+  vector2[4][0]=0; vector2[4][1]=0; vector2[4][2]=0; vector2[4][3]=0; vector2[4][4]=0;
+  vector2[5][0]=0; vector2[5][1]=0; vector2[5][2]=0; vector2[5][3]=0; vector2[5][4]=0;
+  vector2[6][0]=0; vector2[6][1]=0; vector2[6][2]=0; vector2[6][3]=0; vector2[6][4]=0;
+  vector2[7][0]=12; vector2[7][1]=10; vector2[7][2]=14.3; vector2[7][3]=17.2; vector2[7][4]=21.3;
+  vector2[8][0]=29.3; vector2[8][1]=31.2; vector2[8][2]=32.1; vector2[8][3]=29.4; vector2[8][4]=32.5;
+  vector2[9][0]=31.6; vector2[9][1]=31.5; vector2[9][2]=27.5; vector2[9][3]=27.2; vector2[9][4]=32.2;
+  vector2[10][0]=32.0; vector2[10][1]=31.6; vector2[10][2]=28; vector2[10][3]=28.7; vector2[10][4]=31.5;
+  vector2[11][0]=31.1; vector2[11][1]=27.1; vector2[11][2]=26.7; vector2[11][3]=27.9; vector2[11][4]=31.5; // central, pic
+  vector2[12][0]=31.4; vector2[12][1]=26.5; vector2[12][2]=29.6; vector2[12][3]=26.1; vector2[12][4]=31.6;
+  vector2[13][0]=30.2; vector2[13][1]=30.5; vector2[13][2]=29.1; vector2[13][3]=21.4; vector2[13][4]=25.3;
+  vector2[14][0]=29.3; vector2[14][1]=29.4; vector2[14][2]=28.6; vector2[14][3]=29.5; vector2[14][4]=21.4;
+  vector2[15][0]=15.6; vector2[15][1]=15.3; vector2[15][2]=14.2; vector2[15][3]=18.3; vector2[15][4]=15.2;
+  vector2[16][0]=0; vector2[16][1]=0; vector2[16][2]=0; vector2[16][3]=0; vector2[16][4]=0;
+  vector2[17][0]=0; vector2[17][1]=0; vector2[17][2]=0; vector2[17][3]=0; vector2[17][4]=0;
+  vector2[18][0]=0; vector2[18][1]=0; vector2[18][2]=0; vector2[18][3]=0; vector2[18][4]=0;
+  vector2[19][0]=0; vector2[19][1]=0; vector2[19][2]=0; vector2[19][3]=0; vector2[19][4]=0;
+  vector2[20][0]=0; vector2[20][1]=0; vector2[20][2]=0; vector2[20][3]=0; vector2[20][4]=0;
+  vector2[21][0]=0; vector2[21][1]=0; vector2[21][2]=0; vector2[21][3]=0; vector2[21][4]=0;
+  vector2[22][0]=0; vector2[22][1]=0; vector2[22][2]=0; vector2[22][3]=0; vector2[22][4]=0;
+  vector2[23][0]=0; vector2[23][1]=0; vector2[23][2]=0; vector2[23][3]=0; vector2[23][4]=0;
+}
+
+
+void setup() {
+  hora_actual = hores_posada_marxa;
+  minuts_actual = minuts_posada_marxa;
+
+  // Configurem els pins digital com a sortides per actuar sobre el multiplexor
+  pinMode(D0, OUTPUT);
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+
+  // Dades temporals dels vectors. Serveixen per mostrar com queden representades les gràfiques. S'aniran borrant les dades més antigues.
+  inicialitza_vectors();
+  
+  Serial.begin(115200); // Habilitem el port sèrie a 115200 de baud rate 
+
+  // Ens connectem al Wi-Fi amb l'adreça i la contrasenya definits
+  Serial.print("Connectant a: ");
+  Serial.println(ssid); // Mostrem l'adreça del Wi-Fi
+  WiFi.begin(ssid, password); // Iniciem la comunicació
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print("."); // Cada 0,5 s que passin sense connectar-se mostra un punt
+  }
+  
+  // S'ha connectat
+  Serial.println("");
+  Serial.println("WiFi connectat");
+  Serial.println("Adreça IP: ");
+  Serial.println(WiFi.localIP());
+  server.begin();
+  
+}
+
+
+void loop(){
+  WiFiClient client = server.available();   // Escolta si hi ha clients
+
+  if (client) {                             // Si es connecta un nou client,
+    Serial.println("Nou client.");          
+    String LiniaActual = "";                // una cadena memoritza la informació enviada pel client
+    TempsActual = millis();
+    TempsAnterior = TempsActual;
+    while (client.connected() && TempsActual - TempsAnterior <= TempsConnectat) { // Si estem connectats i no han passat els milisegons que indica TempsConnectat,
+      TempsActual = millis();         
+      if (client.available()) {             // Si el client ens passa informació,
+        char c = client.read();             // llegim un caràcters ascii (un byte)
+        Serial.write(c);                    // i el mostrem per pantalla
+        if (c == '\n') {                    // Si rebem un canvi de línia com a caràcter,
+          // és el final de la petició HTTP
+          if (LiniaActual.length() == 0) {
+            // Ara responem donant un OK i indicant el content type, volem una pàgina html. Finalment una línia en blanc, és el protocol
+            client.println("HTTP/1.1 200 OK");
+            client.println("Content-type:text/html");
+            client.println("Tancant connexió");
+            client.println();
+      
+            // Al navegador volem veure una web normal i corrent que es programa amb etiquetes HTML, alguna classe CSS i serveis JavaScript
+            
+            client.println("<!DOCTYPE html><html>");
+            client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+            client.println("<link rel=\"icon\" href=\"data:,\">");
+
+            // Definim la gràfica de la primera branca
+            client.println("<script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n    <script type=\"text/javascript\">\n      google.charts.load('current', {'packages':['line']});\n      google.charts.setOnLoadCallback(drawChart);\n\n    function drawChart() {\n\n      var data = new google.visualization.DataTable();\n      data.addColumn('number', 'Hora');\n      data.addColumn('number', 'Panell 1.1');\n      data.addColumn('number', 'Panell 1.2');\n      data.addColumn('number', 'Panell 1.3');\n      data.addColumn('number', 'Panell 1.4');\n      data.addColumn('number', 'Panell 1.5');\n\n");
+            client.println("data.addRows([\n");
+            for (i=0; i<files; i++){
+                client.println("[");
+                client.println(String(i+1)); 
+                client.println(",");
+                client.println(String(vector[i][0]));
+                for (j=1; j<columnes; j++){
+                  client.println(","); client.println(String(vector[i][j]));
+                }  
+                client.println("]"); client.println(","); client.println("\n");
+            }
+            client.println("]);\n\n\n      var options = {\n        chart: {\n          title: 'Tensions a la branca 1 (V)',\n          // subtitle: 'in millions of dollars (USD)'\n        },\n     //   width: 900,\n     //   height: 500\n      };\n\n      var chart = new google.charts.Line(document.getElementById('linechart_material'));\n\n      chart.draw(data, google.charts.Line.convertOptions(options));\n    }\n    </script>\n");
+
+            // Definim la gràfica de la segona branca
+            client.println("    <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n    <script type=\"text/javascript\">\n    google.charts.load('current', {'packages':['line']});\n    google.charts.setOnLoadCallback(drawChart);\n    \n\n    function drawChart() {\n\n    var data = new google.visualization.DataTable();\n    data.addColumn('number', 'Hora');\n    data.addColumn('number', 'Panell 2.1');\n      data.addColumn('number', 'Panell 2.2');\n      data.addColumn('number', 'Panell 2.3');\n      data.addColumn('number', 'Panell 2.4');\n      data.addColumn('number', 'Panell 2.5');\n\n");
+            client.println("data.addRows([\n");
+            for (i=0; i<files; i++){
+                client.println("[");
+                client.println(String(i+1)); 
+                client.println(",");
+                client.println(String(vector2[i][0]));
+                for (j=1; j<columnes; j++){
+                  client.println(","); client.println(String(vector2[i][j]));
+                }  
+                client.println("]"); client.println(","); client.println("\n");
+            }
+            client.println(" ]); \n\n\n\n    var options = {\n        chart: {\n        title: 'Tensions a la branca 2 (V)',\n       // is3D: true\n        // subtitle: 'in millions of dollars (USD)'\n        },\n     //   width: 700,\n     //   height: 400\n    };\n\n    var chart = new google.charts.Line(document.getElementById('linechart_material2'));\n\n    chart.draw(data, google.charts.Line.convertOptions(options));\n    }\n    </script>");
+
+           
+            // Definim els títols de la pàgina, el que en HTML es coneix com a headings. Alguns caràcters en català no són ben representats, cal corregir-ho
+            client.println("<body><h1 align=\"left\">Instal&middotlaci&oacute fotovoltaica sensoritzada per habitatge unifamiliar</h1>"); // &middot = · , &oacute = ó
+            client.println("<h2 align=\"left\">Lloren&ccedil Fanals Batllori</h2>"); // &ccedil = ç
+
+            client.println("<div id=\"linechart_material\" style=\"width: 800px; height: 400px; padding: 25px\"></div>  \n"); // Inserim les gràfiques del primer grup de plaques
+            client.println("<div id=\"linechart_material2\" style=\"width: 800px; height: 400px; padding: 25px\"></div> "); // Inserim les gràfiques del segon grup de plaques
+          
+            client.println("<img src=\"https://drive.google.com/uc?export=view&id=15-EkLWMhYaRsv-dtbyrlKOrbD7dY71B2\"\n   align=\"left\"      style=\"width: 700px; height: 700px;  padding: 25px\" alt=\"Croquis de les plaques a la teulada\">"); // Inserim imatge del nom de cada panell
+ 
+            client.println("</body></html>"); // Pàgina finalitzada
+            
+            client.println(); // Línia en blanc per finalitzar la comunicació
+            
+            break; // Sortim del while()
+          } 
+          
+          else { // si tens una nova línia, neteja LiniaActual
+            LiniaActual = "";
+          }
+          
+        } 
+       
+        else if (c != '\r') {  // Si tens algun caràcter afegiex-lo al final de LiniaActual
+          LiniaActual += c;   
+        }
+      
+      }
+
+    }
+
+    // Tanquem la connexió, esperant un nou client o que el client existent refresqui la pàgina
+    client.stop();
+    Serial.println("Client desconnectat.");
+    Serial.println("");
+  }
+
+    // Mirem si cal actualitzar els minuts i les hores i si cal fer una lectura de tensions
+    comprova_temps();
+
+  //
+//  Serial.println(analogRead(ENTRADA_ANALOGICA));
+//  Serial.println(millis());
+}
+
+
+
+
+// Encapcem amb funcions
+
+void comprova_temps(){
+    if ((millis() - millis_anteriors) >= 60000){ // ha passat un minut
+        minuts_actual=(millis() - millis_anteriors)/60000; // minuts_actual que sigui float i que guardi segons
+        millis_anteriors = millis(); // memoritzem el moment en què això ha passat
+        if (minuts_actual >= 60){ // si portem 60 minuts, diem que en portem 0 i incrementem l'hora
+            minuts_actual = 0;
+            hora_actual++;
+            lectura_tensions(); // cridem la funció que llegeix les tensions
+        }
+        if (hora_actual >= 24){ // si l'hora és 24, la passem a 0
+            hora_actual = 0;  
+        }
+    }
+}
+
+void lectura_tensions(){
+    float tensio_superior = 0;
+    float tensio_inferior = 0;
+    float guany_bit_tensio = 0.0476288*3.3; // relació entre volts i bits llegits
+    int memoria_ms = 0;
+    int ms_delay = 20;
+    
+    digitalWrite(D3, LOW); digitalWrite(D2, LOW); digitalWrite(D1, LOW); digitalWrite(D0, LOW);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector[hora_actual][0] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, LOW); digitalWrite(D1, LOW); digitalWrite(D0, HIGH);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector[hora_actual][1] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, LOW); digitalWrite(D1, HIGH); digitalWrite(D0, LOW);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector[hora_actual][2] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, LOW); digitalWrite(D1, HIGH); digitalWrite(D0, HIGH);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector[hora_actual][3] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, HIGH); digitalWrite(D1, LOW); digitalWrite(D0, LOW);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector[hora_actual][4] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+// Ara la mateixa idea però pel vector 2
+
+    digitalWrite(D3, LOW); digitalWrite(D2, HIGH); digitalWrite(D1, LOW); digitalWrite(D0, HIGH);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector2[hora_actual][0] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, HIGH); digitalWrite(D1, HIGH); digitalWrite(D0, LOW);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector2[hora_actual][1] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, LOW); digitalWrite(D2, HIGH); digitalWrite(D1, HIGH); digitalWrite(D0, HIGH);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector2[hora_actual][2] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, HIGH); digitalWrite(D2, LOW); digitalWrite(D1, LOW); digitalWrite(D0, LOW);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector2[hora_actual][3] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+
+    digitalWrite(D3, HIGH); digitalWrite(D2, LOW); digitalWrite(D1, LOW); digitalWrite(D0, HIGH);
+    memoria_ms = millis();
+    while ((millis() - memoria_ms) < ms_delay){}
+    vector2[hora_actual][4] = analogRead(ENTRADA_ANALOGICA) * guany_bit_tensio;
+  
+}

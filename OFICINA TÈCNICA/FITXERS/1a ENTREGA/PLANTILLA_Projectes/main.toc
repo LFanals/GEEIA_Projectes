@@ -1,0 +1,19 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{\numberline {1}\uppercase {Generalitats}}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}\uppercase {Previsi\IeC {\'o} de c\IeC {\`a}rregues}}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Enllumenat}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}For\IeC {\c c}a}{3}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Resum de previsi\IeC {\'o} de c\IeC {\`a}rregues}{4}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}\uppercase {Condicions del subministrament}}{6}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}\uppercase {Empresa subministradora}}{7}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}\uppercase {Escomesa i caixa general de protecci\IeC {\'o}}}{8}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}\uppercase {L\IeC {\'\i }nia repartidora}}{9}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}\uppercase {Conjunt de protecci\IeC {\'o} i mesura}}{10}{chapter.7}% 
+\contentsline {chapter}{\numberline {8}\uppercase {Derivaci\IeC {\'o} individual}}{12}{chapter.8}% 
+\contentsline {chapter}{\numberline {9}\uppercase {Interruptor de control de pot\IeC {\`e}ncia i interruptor general autom\IeC {\`a}tic.}}{13}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}\uppercase {Quadre general de protecci\IeC {\'o} i comandament}}{14}{chapter.10}% 
+\contentsline {chapter}{\numberline {11}\uppercase {Distribuci\IeC {\'o} general}}{16}{chapter.11}% 
+\contentsline {chapter}{\numberline {12}\uppercase {Posada a terra}}{18}{chapter.12}% 
+\contentsline {chapter}{\numberline {13}\uppercase {Conclusi\IeC {\'o}}}{19}{chapter.13}% 
+\contentsline {chapter}{\numberline {A}\uppercase {C\IeC {\`a}lculs}}{20}{Annex.1.A}% 
+\contentsline {chapter}{\numberline {B}\uppercase {Caracter\IeC {\'\i }stiques}}{23}{Annex.1.B}% 

@@ -1,0 +1,96 @@
+\chapter{\uppercase{Distribució general}}
+%Càlculs
+Màquines com els extractors, les màquines buit, les màquines de fred, les neveres i congeladors disposen de motors elèctrics. El rentaplats també té motor elèctric, però la majoria de potència que consumeix ho fa per escalfar aigua, així que no s'aplica cap factor.  A la nostra instal·lació no hi ha cap enllumenat amb descàrrega, totes les lluminàries són de tipus LED, no cal aplicar cap factor. A l'annex s'indiquen aquesta factors.\\
+\newline
+L'agrupament 1 comprèn les línies L1, L2, L3 i L4. Són monofàsiques però com s'ha comentat s'alimenten amb fases diferents. L1 i L2 són línies d'enllumenat i L3 i L4 són línies de força per màquines monofàsiques. El factor de potència d'aquestes línies es considera 1.
+%
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Secció ($mm^{2}$) & PIA (A)\\
+ \hline \hline 
+L1 & Enllumenat habitacions i cambra& 1.370,5 &2x2,5 + 2,5& 10 \\ \hline
+L2 & Enllumenat cuina & 1.476 \ \ \ \  &2x2,5 + 2,5& 10 \\ \hline 
+L3 & Força oficina, menjador, màquines de buit & 7.775 \ \ \ \  &2x10 + 10 & 40 \\ \hline 
+L4 & Força cuina & 7.235 \ \ \ \   &2x6 + 6 & 40 \\ \hline 
+ \hline
+ Total & & 8.900,5 &  &  \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 1}
+\end{center}
+\end{table}
+
+
+\noindent El segon agrupament és purament per la línia que alimenta els rentaplats de la cuina, la L5. Aquests rentaplats consumeixen molta potència perquè escalfen aigua; el seu motor consumeix poca potència, per això no se'ls aplica cap factor d'arrencada. El factor de potència és de 0,95. 
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Secció ($mm^{2}$) & PIA (A)\\
+ \hline \hline 
+L5 & Rentaplats cuina & 36.000 &4x16 + 16& 63 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 2}
+\end{center}
+\end{table}
+
+\noindent L'agrupament número 3 alimenta els dos extractors, que van amb motor elèctric, i els equips de les cambres de fred. El factor de potència és de 0,9.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Secció ($mm^{2}$) & PIA (A)\\
+ \hline \hline 
+L6 & Extractors i cambres de fred & 19.000 & 4x10 + 10& 40 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 3}
+\end{center}
+\end{table}
+
+\noindent L'últim agrupament, el 4, alimenta l'abatidor de la sala de preparació. El seu factor de potència és de 0,95.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & Secció ($mm^{2}$) & PIA (A)\\
+ \hline \hline 
+L7 & Abatidor sala de preparació & 16.975 & 4x10 + 10& 40 \\
+ \hline
+ \end{tabu}
+ \caption{Agrupament 4}
+\end{center}
+\end{table}
+%
+%
+
+\noindent A continuació es detallen els PIAs utilitzats en les diferents línies. Aigües amunt, com a interruptor magnetotèrmic, hi ha l'IGA que ja s'ha descrit.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[3, l]|X[2, l]|X[r]|X[r]|X[r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat (A) & Intensitat PIA (A) & Classe & Nombre de pols \\
+ \hline \hline 
+L1 & Enllumenat habitacions i cambres & 5,61 & 10 & C & 2 \\ \hline
+L2 & Enllumenat cuina & 6,42 & 10 & C & 2 \\ \hline
+L3 & Força oficina, menjador, màquines de buit & 33,80 & 40 & C & 2 \\ \hline
+L4 & Força cuina & 31,45 & 40 & C & 2 \\ \hline
+L5 & Rentaplats cuina & 54,92 & 64 & C & 4 \\ \hline
+L6 & Extractors i cambres de fred & 30,60 & 40 & D & 4 \\ \hline
+L7 & Abatidor sala de preparació & 25,90 & 40 & C & 4 \\ \hline
+
+ \end{tabu}
+ \caption{Proteccions magnetotèrmiques de les línies}
+\end{center}
+\end{table}
+
+
+\clearpage

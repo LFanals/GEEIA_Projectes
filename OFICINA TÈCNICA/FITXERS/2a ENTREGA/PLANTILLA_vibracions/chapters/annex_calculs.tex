@@ -1,0 +1,63 @@
+\chapter{\uppercase{Càlculs}}
+Pel càlcul de les seccions dels conductors cal tenir en compte els factors de simultaneïtat d'alguns elements i els factors que marca el REBT: 1,25 pel motor elèctric de més potència de la línia, tal com es detalla a la ITC-47; i 1,8 per les lluminàries amb descàrrega, tal com s'indica a la ITC-44. A l'obrador hi ha molts motors elèctric però cap llum amb descàrrega.\\
+\newline
+En algunes línies es considera que el factor de potència és unitari. A la realitat mai valdrà exactament 1, però sí que es preveu que tingui un valor molt semblant. Les màquines que s'han escollit tenen un factor de potència proper a l'unitari però diferent de 1.\\
+\newline Per calcular la intensitat de les línies monofàsiques es fa servir la següent fórmula:
+\begin{equation}
+I_{linia} = \frac{P}{V*\cos(\phi)}
+\end{equation}
+V = 230 V\\
+P és la potència que consumeixen els elements connectats a la línia\\
+$\phi$ és el factor de potència\\
+\newline En trifàsic, l'equació que s'utilitza és:
+\begin{equation}
+I_{linia} = \frac{P}{\sqrt3*V_{linia}*\cos(\phi)}
+\end{equation}
+$V_{linia}$ = 400 V\\
+\newline És important calcular la caiguda de tensió a les línies per tal de veure si estan dimensionades correctament. La caiguda de tensió en línies d'enllumenat no pot ser superior al 3\% i en línies de força no pot ser superior al 5\% de la tensió de subministrament. La caiguda de tensió màxima a la derivació individual és de 1,5\%.\\
+\newline En monofàsic:
+\begin{equation}
+e(\%)=\frac{P}{V}\frac{2*l}{k*S}
+\end{equation}
+l és la longitud ja sigui de la fase o el neutre des del comptador a l'element més llunyà\\
+$k = 56 \frac{m}{mm^{2}\si{\ohm}}$\\
+S és la secció del cable en m$m^2$\\
+\newline
+En trifàsic, l'equació que s'utilitza és:
+\begin{equation}
+e(\%)=\frac{P}{V}\frac{l}{k*S}
+\end{equation}
+\\
+El dimensionament de les línies ha de permetre que les caigudes de tensió no superin els màxims indicats prèviament. Alhora, els cables han de poder admetre les intensitats calculades, per això ens guiem amb la taula de la ITC-19 del REBT. Finalment, cal comprovar que  l'interruptor magnetotèrmic té una intensitat nominal superior a la calculada per la línia i menor a l'admissible que marca la ITC-19.\\
+\newline La instal·lació és trifàsica, per tant, hi ha 3 conductors de fase i un conductor de neutre. El conductor de terra transcorre per totes les línies i té una secció igual als conductors de les línies, tal com s'indica al plànol. El neutre, que arriba per l'escomesa, també és de la mateixa secció que els conductors de fase. Les màquines trifàsiques necessiten el neutre pels seus equips electrònics.\\
+\newline
+Per comprovar que el valor de secció de la derivació individual és correcte quan la línia va amb una terna de cables unipolars per tub cal tenir en compte un factor d'intensitat de 0,8.
+\begin{equation}
+I_{DI} < 0.8 * I_{max. admissible}
+\end{equation}
+
+\noindent A continuació es mostren les diferents línies de forma detallada. La secció s'ha comprovat tenint en compte les fórmules explicades i les seccions mínimes per intensitat segons marca el REBT. S'han verificat les línies pel cas més desfavorable. Les seccions dels tubs compleixen amb la ITC-21.\\
+\newline Les tensions nominals són 230 V per les línies monofàsiques i 400 V per les trifàsiques. Tots els cables de les línies són de coure de 450/750 V d'aïllament. La derivació individual és de coure amb 0,6/1 kV d'aïllament. L'aïllament de la instal·lació és de 1.000 k$\si{\ohm}$.
+
+\begin{table}[H]
+\scriptsize
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.5, l]|X[2, l]|X[r]|X[0.6, r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & cos($\phi$) & Intensitat (A) & Distància màxima (m) & Seccions fase, neutre, terra ($mm^{2}$) & Diàmetre tub (mm) & Caiguda de tensió (\%) & Caiguda de tensió acum. (\%)\\
+ \hline \hline 
+DI & Derivació individual& 87.000 \ \ \ \ & 0,96 & 131,32 & 8 &3x35 + 35 + 16& 160 & 0,23 & 0,23 \\ \hline
+L1 & Enllumenat habitacions i cambra& 1.370,5 & 1 & 5,96 & 55 &2,5 + 2,5 + 2,5& 20 & 2,04 & 2,27 \\ \hline
+L2 & Enllumenat cuina & 1.476 \ \ \ \  & 1 & 6,42 & 47 &2,5 + 2,5 + 2,5& 20 & 1,87 & 2,10 \\ \hline 
+L3 & Força oficina, menjador, màquines de buit & 7.775 \ \ \ \  & 1 & 33,80 & 51 &10 + 10 + 10& 25 & 2,68 & 2,91 \\ \hline 
+L4 & Força cuina & 7.235 \ \ \ \  & 1 & 31,46 & 33 & 6 + 6 + 6& 25 & 2,67 & 2,90 \\ \hline
+L5 & Rentaplats cuina & 36.000 \ \ \ \ & 0,95 & 54,92 & 54 &3x16 + 16 + 16& 32 & 1,44 & 1,67 \\ \hline 
+L6 & Extractors i cambres de fred & 19.000 \ \ \ \ & 0,9 & 30,60 & 36 &3x10 + 10 + 10& 32 & 0,86 & 1,09 \\ \hline
+L7 & Abatidor sala de preparació & 16.975 \ \ \ \ & 0,95 & 25,90 & 44 &3x10 + 10 + 10& 32 & 0,84 & 1,07 \\ \hline
+
+ \end{tabu}
+ \caption{Línies detallades}
+\end{center}
+\end{table}
+
+

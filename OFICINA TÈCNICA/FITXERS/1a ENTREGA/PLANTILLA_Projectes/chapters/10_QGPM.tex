@@ -1,0 +1,32 @@
+\chapter{\uppercase{Quadre general de protecció i comandament}}
+La ITC-17 explica les característiques del quadre general de protecció i comandament, el qual conté els elements per protegir i comandar la instal·lació. És obligatori instal·lar un interruptor general automàtic (IGA), interruptors de tall per sobrecàrregues i curtcircuits per cada circuit interior, un dispositiu de protecció contra sobretensions si així ho indica la ITC-23 i un diferencial per cada grup de línies. És opcional instal·lar un interruptor diferencial general si tots els circuits estan protegits amb algun diferencial aigües amunt.\\
+\newline El quadre general de protecció i comandament ha de tenir, com a mínim, un grau IP30 segons marca la norma UNE 20 324 i un grau IK07 segons la norma UNE-EN 50102.\\
+\newline
+La ITC-22 del REBT indica que tots els circuits han d'estar protegits contra els efectes de les sobreintensitats que poden presentar-se. La interrupció del circuit s'ha de realitzar en un temps convenient. Alguns factors causants de sobreintensitats són les sobrecàrregues, els curtcircuits i les descàrregues elèctriques atmosfèriques.\\
+\newline A la nostra instal·lació es protegeix cada línia contra sobreintensitats amb el magnetotèrmic normalitzat més proper a la intensitat prevista i que la superi. Els interruptors magnetotèrmics s'escullen monofàsics o trifàsics segons com sigui la línia que han de protegir.\\
+\newline
+Tal com comenta la ITC-24, el tall automàtic de l'alimentació després de l'aparició d'una fallada té la funció d'impedir que una tensió de contacte de valor suficient es mantingui durant un temps tal que podria donar lloc a riscos.\\
+\newline La protecció contra contactes indirectes es fa amb interruptors diferencials de 30 mA de sensibilitat per la majoria de línies. La línia dels extractors i algunes màquines de fred van amb un diferencial 100 mA de sensibilitat per evitar obrir el circuit quan hi ha fugues de corrent generades pels equips electrònics i els seus filtres. Aigües amunt de les línies hi ha un diferencial toroïdal de 300 mA de sensibilitat, tal com marca el Vademècum.\\
+\newline Tots els diferencials són capaços de suportar la intensitat màxima prevista de les càrregues tenen aigües avall. Els interruptors diferencials són tots de 4 pols degut a què 3 protegeixen línies trifàsiques i un protegeix línies monofàsiques que s'alimenten amb diferents fases. El règim de neutre és TT.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[3, l]|X[2, l]|X[r]|X[r]|X[1,r]|X[1,r]|X[r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat (A) & Intensitat nominal (A) & Sens. (mA) & Classe & Nombre de pols \\
+ \hline \hline 
+L1+L2+L3+L4 & Enllumenat i força monofàsics & 77,30 & 80 & 30 & A & 4 \\ \hline
+L5 & Rentaplats cuina & 54,92 & 63 & 30 & A & 4 \\ \hline
+L6 & Extractors i cambres de fred & 30,60 & 40 & 100 & B & 4 \\ \hline
+L7 & Abatidor de la sala de preparació & 25,90 & 40 & 30 & A & 4 \\ \hline \hline
+L1+L2+L3+L4+L5+L6+L7 & Totes les línies & 130,08 & 160 & 300 & A & 4 \\ \hline
+ \end{tabu}
+ \caption{Proteccions diferencials de la instal·lació}
+\end{center}
+\end{table}
+\noindent L'últim diferencial de la taula és general, està en sèrie amb l'IGA.\\
+\newline
+La ITC-23 tracta sobre la protecció de les instal·lacions elèctriques contra les sobretensions transitòries que es transmeten a les xarxes de distribució i s'originen, fonamentalment, com a conseqüència de descàrregues atmosfèriques, commutacions de les xarxes i defectes d'aquestes.
+La instal·lació té un interruptor contra sobretensions permanents i transitòries per protegir el circuit de la possibilitat de què la tensió subministrada per l'empresa distribuïdora fos excessiva. També quedem protegits contra pics de tensió de curta durada provocats per descàrregues elèctriques.
+
+\clearpage
